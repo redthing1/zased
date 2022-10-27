@@ -1,4 +1,4 @@
-zstd_source
+libzstd_source
 
 # Compiled Object files
 *.o
