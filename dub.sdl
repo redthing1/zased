@@ -1,0 +1,12 @@
+name "zased"
+description "portable static zstd for D"
+authors "redthing1"
+copyright "Copyright © 2022, redthing1"
+license "gpl-3.0"
+targetType "library"
+
+configuration "default" {
+    # on posix platforms, link to staticlibrary
+    lflags "-L$PACKAGE_DIR" "$PACKAGE_DIR/libzstd.a" platform="posix"
+    preGenerateCommands "bash $PACKAGE_DIR/build-clib.sh" platform="posix"
+}

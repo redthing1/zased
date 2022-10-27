@@ -1,0 +1,12 @@
+name "demo"
+description "zased demo"
+authors "no"
+copyright "Copyright © 2022, no"
+license "proprietary"
+targetType "executable"
+
+dependency "zased" path=".."
+
+configuration "default" {
+    lflags "-L./." "-rpath=./."
+}
